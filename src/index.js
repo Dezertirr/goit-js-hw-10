@@ -1,19 +1,17 @@
 import './css/styles.css';
 import { debounce } from 'lodash';
 import Notiflix from 'notiflix';
-
 import { createCountryList, showCountry } from './js/makeMarkup.js';
-
-
 
 const DEBOUNCE_DELAY = 300;
 
 export const MAX_RESULTS = 10;
 export { countryInput };
+export const countryInfo = document.querySelector('.country-info');
 
 const countryInput = document.getElementById('search-box');
 const countryList = document.querySelector('.country-list');
-export const countryInfo = document.querySelector('.country-info');
+
 
 countryInput.addEventListener('input', debounce(() => {
   const searchcontry = countryInput.value.trim();
