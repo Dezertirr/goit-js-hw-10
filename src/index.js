@@ -3,7 +3,7 @@ import { debounce } from 'lodash';
 import Notiflix from 'notiflix';
 
 import { createCountryList, showCountry } from './js/makeMarkup.js';
-import { fetchCountries } from './js/fetchCountries.js'
+
 
 
 const DEBOUNCE_DELAY = 300;
