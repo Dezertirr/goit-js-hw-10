@@ -13,7 +13,7 @@ export { countryInput };
 
 const countryInput = document.getElementById('search-box');
 const countryList = document.querySelector('.country-list');
-const countryInfo = document.querySelector('.country-info');
+export const countryInfo = document.querySelector('.country-info');
 
 countryInput.addEventListener('input', debounce(() => {
   const searchcontry = countryInput.value.trim();

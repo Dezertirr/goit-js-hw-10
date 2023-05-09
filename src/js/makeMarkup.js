@@ -1,3 +1,5 @@
+import { countryInfo } from "../index.js";
+
 export function createCountryList(country) {
     const listItem = document.createElement('li');
     listItem.innerHTML = `<img class='country-flag' src ='${country.flags.svg}' alt='Flag of ${country.name.official}' width='30' /><p>${country.name.official}</p>`;
