@@ -1,5 +1,7 @@
 import Notiflix from "notiflix";
-import { MAX_RESULTS, createCountryList, showCountry } from '../index.js';
+import {createCountryList, showCountry} from './makeMarkup';
+import { MAX_RESULTS } from '../index.js';
+
 
 export function fetchCountries(countryInput, countryList, countryInfo) {
   const searchcontry = countryInput.value.trim();
