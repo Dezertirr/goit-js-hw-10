@@ -14,8 +14,8 @@ const countryInput = document.getElementById('search-box');
 const countryList = document.querySelector('.country-list');
 
 
-countryInput.addEventListener('change', debounce(() => {
-  fetchCountries
+countryInput.addEventListener('input', debounce(() => {
+  const searchcontry = countryInput.value.trim();
   fetch(`https://restcountries.com/v3.1/name/${searchcontry}`)
     .then((response) => {
       if (!response.ok) {

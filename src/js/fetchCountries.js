@@ -1,5 +1,4 @@
-export function fetchCountries(countryInput, countryList, countryInfo) {
-  const searchcontry = countryInput.value;
+export function fetchCountries( countryList, countryInfo) {
   if (searchcontry === "") {
     countryList.innerHTML = "";
     countryInfo.innerHTML = "";
