@@ -1,19 +1,19 @@
 import { countryInfo } from "../index.js";
 
 export function createCountryList(country) {
-    const listItem = document.createElement('li');
-    listItem.innerHTML = `<img class='country-flag' src ='${country.flags.svg}' alt='Flag of ${country.name.official}' width='30' /><p>${country.name.official}</p>`;
-    listItem.addEventListener('click', () => {
-        showCountry(country, countryInfo);
-      });
-    listItem.classList.add('country-item');
+  const listItem = country.map ((result) => {
+return `<li class="list-item">
+<img src=${result.flags.svg} alt="" width="30" />
+<h3>${result.name.common}</h3>
+</li>`;
+  }).join('');
     return listItem;
   }
 
 
 
-  export function showCountry(country, countryInfo) {
-    if (countryInfo) {
+  export function showCountry(country) {
+ 
       const countryInfoHTML = `
           <h2>${country.name.official}</h2>
           <p><span>Capital:</span> ${country.capital}</p>
@@ -22,5 +22,5 @@ export function createCountryList(country) {
           <img src="${country.flags.svg}" alt="Flag of ${country.name.official}" width="300" />
       `;
       countryInfo.innerHTML = countryInfoHTML;
-    }
+    
   }
